@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yalantis.flip.sample">
+    package="com.yalantis.flip.cinema">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -11,7 +11,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.FriendsActivity"
+            android:name="com.yalantis.flip.cinema.activity.FriendsActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -21,22 +21,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".OneFilm.MainActivityOne"
+            android:name="com.yalantis.flip.cinema.OneFilm.MainActivityOne"
+            android:theme="@style/AppCompat.Toolbar."
+            android:label="Иван Царевич">
+        </activity>
+        <activity
+            android:name="com.yalantis.flip.cinema.TwoFilm.MainActivityTwo"
             android:theme="@style/AppCompat.Toolbar."></activity>
         <activity
-            android:name=".TwoFilm.MainActivityTwo"
+            android:name="com.yalantis.flip.cinema.ThreeFilm.MainActivityThree"
             android:theme="@style/AppCompat.Toolbar."></activity>
         <activity
-            android:name=".ThreeFilm.MainActivityThree"
+            android:name="com.yalantis.flip.cinema.FourFilm.MainActivityFour"
             android:theme="@style/AppCompat.Toolbar."></activity>
         <activity
-            android:name=".FourFilm.MainActivityFour"
+            android:name="com.yalantis.flip.cinema.FiveFilm.MainActivityFive"
             android:theme="@style/AppCompat.Toolbar."></activity>
         <activity
-            android:name=".FiveFilm.MainActivityFive"
+            android:name="com.yalantis.flip.cinema.SixFilm.MainActivitySix"
             android:theme="@style/AppCompat.Toolbar."></activity>
         <activity
-            android:name=".SixFilm.MainActivitySix"
+            android:name="com.yalantis.flip.cinema.menu.InfoByCinema"
             android:theme="@style/AppCompat.Toolbar."></activity>
 
 

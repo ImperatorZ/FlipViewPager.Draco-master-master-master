@@ -2,14 +2,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="info.fandroid.reminder.fragment.DoneTaskFragment">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Радик"
-        android:layout_gravity="center"
-        android:textSize="35sp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Режиссер: Дэн Мазер"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/producer"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сборы в США : $11 525 000"
+            android:layout_below="@+id/producer"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/money"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Актеры: Роберт Де Ниро (Дик Кели), Зак Эфрон (Джейсон Кели), Зой Дойч (Шадия)"
+            android:layout_below="@+id/money"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/ope"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/trailerfive"
+            android:src="@drawable/fivetrailer"
+            android:onClick="youtubefive"
+            android:layout_alignTop="@+id/ope"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YouTube"
+            app:bootstrapBrand="danger"
+            app:bootstrapSize="lg"
+            app:buttonMode="regular"
+            app:showOutline="false"
+            android:onClick="youtubefive"
+            app:roundedCorners="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/trailerfive"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
 
 </FrameLayout>

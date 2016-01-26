@@ -2,14 +2,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="info.fandroid.reminder.fragment.DoneTaskFragment">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Радик"
-        android:layout_gravity="center"
-        android:textSize="35sp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Режиссер: Дарина Шмидт"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/producer"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cборы в России: $9 630 637"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/producer"
+            android:id="@+id/money"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Озвучивание: Никита Ефремов, Иван Охлабыстин, Михаил Боярский"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/money"
+            android:id="@+id/ope"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/trailerone"
+            android:layout_below="@+id/ope"
+            android:src="@drawable/onetrailer"
+            android:onClick="youtubeone"/>
+
+
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YouTube"
+            app:bootstrapBrand="danger"
+            app:bootstrapSize="lg"
+            app:buttonMode="regular"
+            app:showOutline="false"
+            android:onClick="youtubeone"
+            app:roundedCorners="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/trailerone"
+            android:layout_centerHorizontal="true" />
+
+
+
+    </RelativeLayout>
 
 </FrameLayout>

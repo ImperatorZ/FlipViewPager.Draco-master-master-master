@@ -1,15 +1,99 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="info.fandroid.reminder.fragment.CurrentTaskFragment">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sex"
-        android:layout_gravity="center"
-        android:textSize="35sp"/>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal|bottom">
+
+        <ImageView
+            android:id="@+id/ava"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="left"
+            android:src="@drawable/grandpa" />
+
+        //-----------------------------------------------------------------------------------------------------
+
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ava"
+            android:text="  Год: 2015" />
+
+        <TextView
+            android:id="@+id/country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/year"
+            android:layout_toEndOf="@+id/ava"
+            android:layout_toRightOf="@+id/ava"
+            android:text="  Страна: США" />
+
+        <TextView
+            android:id="@+id/genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/country"
+            android:layout_toEndOf="@+id/ava"
+            android:layout_toRightOf="@+id/ava"
+            android:text="  Жанр: Комедия " />
+
+        <TextView
+            android:id="@+id/perenoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/genre"
+            android:layout_toEndOf="@+id/ava"
+            android:layout_toRightOf="@+id/ava"
+            android:text="  " />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Длительность: 102 мин/ 01:42"
+            android:layout_alignTop="@+id/perenoc"
+            android:layout_toRightOf="@+id/ava"
+            android:layout_toEndOf="@+id/ava" />
+
+        <TextView
+            android:id="@+id/ratingtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Оценка Kinopoisk.ru"
+            android:textColor="#0097A7"
+            android:layout_below="@+id/time"
+            android:layout_toRightOf="@+id/ava" />
+
+        <RatingBar
+            android:id="@+id/rating"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="10"
+            android:rating="6.9"
+            android:layout_below="@+id/ratingtext"
+            android:layout_toRightOf="@+id/ava" />
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ava"
+            android:text="@string/info_ded"
+            android:textSize="18dp"
+            android:layout_marginLeft="7dp"/>
+
+
+
+    </RelativeLayout>
 
 </FrameLayout>
